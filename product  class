@@ -1,0 +1,29 @@
+class product{
+       string name;
+       double price;
+//constructor
+product(string name,double price){
+        this.name=name;
+        this.price=price;
+}
+//method to apply discount
+void appyDiscount(double percentage){
+      price=price-(price*(percentage/100));
+}
+//Getter method
+public double getprice(){
+         return price;
+  }
+}
+
+import java.util.scanner;
+public class MainApp{
+      public static void main(string[]args){
+        scanner scanner=new scanner (system.in);
+        product p=new product("Laptop",1500);
+    system.out.println("Enter discount percentage:");
+        double discount=scanner.nextDouble();
+         p.applyDiscount(discount);
+    system.out.println("Updated price:$"+ p.getprice());
+   }
+}
